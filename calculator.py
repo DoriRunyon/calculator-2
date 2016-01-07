@@ -24,7 +24,7 @@ while True:
     input_list = input.split(" ")
     try:
         if input_list[0] == "+":
-            print add(input_list[1],input_list[2])
+            print add(input_list[1:])
         elif input_list[0] == "-":
             print subtract(input_list[1],input_list[2])   
         elif input_list[0] == "*":
@@ -45,7 +45,8 @@ while True:
     except (ValueError, TypeError, NameError, IndexError, RuntimeError):
         print "Please try again."
 
-            
+# reduce(lambda x, y: x+y, input_list[1:]) 
+
 
 
 # def do_setup():

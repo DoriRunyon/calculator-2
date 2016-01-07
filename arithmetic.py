@@ -12,12 +12,18 @@ import math
 # we will want to convert both arguments into a list along with therestnums if it exists.
 # the final function will look something like: reduce(lambda x,y: x-y, therestnums)
 
-def add(num1,num2,*therestnums):
-    new_num = 0
-    for i in therestnums:
-        i = int(i)
-        new_num = (int(new_num) + i)
-    return (int(num1)+int(num2)+int(new_num))
+def add(*therestnums):
+    print type(therestnums[0])
+    print therestnums
+    print therestnums[0]
+    intlist = [int(x) for x in therestnums[0]]
+    return (reduce(lambda x, y: x+y, intlist))
+
+    # new_num = 0
+    # for i in therestnums:
+    #     i = int(i)
+    #     new_num = (int(new_num) + i)
+    # return (int(num1)+int(num2)+int(new_num))
 
 def subtract(num1, num2):
     return int(num1) - int(num2)
