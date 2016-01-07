@@ -42,7 +42,7 @@ while True:
         else:
             if input_list[0] == "q":
                 break
-    except (ValueError, TypeError, NameError, IndexError,RuntimeError):
+    except (ValueError, TypeError, NameError, IndexError, RuntimeError):
         print "Please try again."
 
             
